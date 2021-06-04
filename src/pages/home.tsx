@@ -49,7 +49,7 @@ const Home: React.FC = () => {
 
   return (
     <div>
-      <Typography.Title>Dirty JSON</Typography.Title>
+      <Typography.Title>Repair JSON</Typography.Title>
       <Form form={form} layout="vertical" onFinish={onFixIt}>
         <Form.Item name="json" required rules={[{ required: true, message: 'This field cannot be blank' }]}>
           <TextArea rows={10} />
