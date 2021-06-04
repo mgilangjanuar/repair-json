@@ -8,8 +8,8 @@ import ReactJson from 'react-json-view'
 
 const Home: React.FC = () => {
   const example = {
-    object: { text: 'greeting :\n"halo"', from: '🤡 unknown', timestamp: 1406543845 },
-    string: '{"text":"greeting :\\n"halo"" "from": "🤡 unknown", timestamp: 01406543845'
+    object: { text: 'greeting :\n\t"halo"', from: '🤡 unknown', timestamp: 1406543845 },
+    string: '{"text":"greeting :\\n\\t"halo"" from: \'🤡 unknown\', timestamp: 01406543845'
   }
   const [form] = useForm()
   const [object, setObject] = useState<any>(example.object)

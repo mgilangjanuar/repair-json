@@ -1,13 +1,13 @@
-import { GithubOutlined, HomeOutlined, MenuFoldOutlined, MenuUnfoldOutlined, UserOutlined } from '@ant-design/icons'
+import { GithubOutlined, HomeOutlined, MenuFoldOutlined, MenuUnfoldOutlined } from '@ant-design/icons'
 import { Divider, Layout, Menu, Typography } from 'antd'
+import 'antd/dist/antd.dark.min.css'
 import React, { useState } from 'react'
 import Home from './pages/home'
 
-import 'antd/dist/antd.dark.min.css'
 
 
 function App(): React.ReactElement {
-  const [collapsed, setCollapsed] = useState<boolean>(false)
+  const [collapsed, setCollapsed] = useState<boolean>()
 
   return (
     <Layout>
@@ -15,7 +15,7 @@ function App(): React.ReactElement {
         <Menu style={{ paddingTop: '60px' }} theme="dark" mode="inline" defaultSelectedKeys={['1']}>
           <Menu.Item key="1" icon={<HomeOutlined />}>Home</Menu.Item>
           <Menu.Item key="2" icon={<GithubOutlined />}><a target="_blank" href="https://github.com/mgilangjanuar/repair-json">GitHub</a></Menu.Item>
-          <Menu.Item key="3" icon={<UserOutlined />}>Creator</Menu.Item>
+          {/* <Menu.Item key="3" icon={<UserOutlined />}>Creator</Menu.Item> */}
         </Menu>
       </Layout.Sider>
       <Layout>
