@@ -1,4 +1,4 @@
-import { GithubOutlined, HomeOutlined, MenuFoldOutlined, MenuUnfoldOutlined } from '@ant-design/icons'
+import { GithubOutlined, HomeOutlined, MenuFoldOutlined, MenuUnfoldOutlined, CoffeeOutlined } from '@ant-design/icons'
 import { Divider, Layout, Menu, Typography } from 'antd'
 import 'antd/dist/antd.dark.min.css'
 import React, { useState } from 'react'
@@ -15,7 +15,7 @@ function App(): React.ReactElement {
         <Menu style={{ paddingTop: '60px' }} theme="dark" mode="inline" defaultSelectedKeys={['1']}>
           <Menu.Item key="1" icon={<HomeOutlined />}>Home</Menu.Item>
           <Menu.Item key="2" icon={<GithubOutlined />}><a target="_blank" href="https://github.com/mgilangjanuar/repair-json">GitHub</a></Menu.Item>
-          {/* <Menu.Item key="3" icon={<UserOutlined />}>Creator</Menu.Item> */}
+          <Menu.Item key="3" icon={<CoffeeOutlined />}><a target="_blank" href="https://paypal.me/mgilangjanuar">Donate</a></Menu.Item>
         </Menu>
       </Layout.Sider>
       <Layout>
