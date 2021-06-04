@@ -1,4 +1,4 @@
-import { Button, Form, notification, Space, Switch } from 'antd'
+import { Button, Form, notification, Space, Switch, Typography } from 'antd'
 import { useForm } from 'antd/lib/form/Form'
 import TextArea from 'antd/lib/input/TextArea'
 import djson from 'dirty-json'
@@ -9,7 +9,7 @@ import ReactJson from 'react-json-view'
 const Home: React.FC = () => {
   const example = {
     object: { text: 'greeting :\n"halo"', from: '🤡 unknown', timestamp: 1406543845 },
-    string: '{"text":"greeting :\\n"halo"" "from": "🤡 unknown", timestamp: 1406543845'
+    string: '{"text":"greeting :\\n"halo"" "from": "🤡 unknown", timestamp: 01406543845'
   }
   const [form] = useForm()
   const [object, setObject] = useState<any>(example.object)
@@ -49,6 +49,7 @@ const Home: React.FC = () => {
 
   return (
     <div>
+      <Typography.Title>Dirty JSON</Typography.Title>
       <Form form={form} layout="vertical" onFinish={onFixIt}>
         <Form.Item name="json" required rules={[{ required: true, message: 'This field cannot be blank' }]}>
           <TextArea rows={10} />
@@ -60,7 +61,8 @@ const Home: React.FC = () => {
           </Space>
         </Form.Item>
       </Form>
-      <Form.Item label="Pretty View &nbsp; &nbsp;">
+      <Typography.Title>Result</Typography.Title>
+      <Form.Item label="Pretty View &nbsp; ">
         <Switch onChange={checked => setPrettyView(checked)} checked={prettyView} />
       </Form.Item>
       <div>
